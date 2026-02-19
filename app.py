@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # -------------------- Load model & dataset --------------------
+
+model = joblib.load("model.pkl")
 model = joblib.load("pollution_model.pkl")
 model_cols = joblib.load("model_columns.pkl")
 
@@ -30,7 +32,7 @@ search_text = st.text_input("Search Lake / River", "")
 
 if search_text.strip():
     results = [n for n in df['site_name'].unique()
-               if search_text.lower() in n.lower()]
+        if search_text.lower() in n.lower()]
 else:
     results = sorted(df['site_name'].unique())
 

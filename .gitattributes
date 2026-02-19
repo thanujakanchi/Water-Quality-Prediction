@@ -1,3 +1,0 @@
-*.csv filter=lfs diff=lfs merge=lfs -text
-bigfile.csv filter=lfs diff=lfs merge=lfs -text
-pollution_model.csv filter=lfs diff=lfs merge=lfs -text
